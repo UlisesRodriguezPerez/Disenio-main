@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane fx:id="contenedor" prefHeight="526.0" prefWidth="933.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Vista.Controladores.PersonajesCreados">
+   <children>
+      <ImageView fitHeight="578.0" fitWidth="933.0" layoutY="-1.0" opacity="0.46" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Imagenes/fondo5.png" />
+         </image>
+         <effect>
+            <GaussianBlur>
+               <input>
+                  <Lighting diffuseConstant="2.0" specularConstant="1.13">
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </input></GaussianBlur>
+         </effect>
+      </ImageView>
+      <Text fx:id="armasL" layoutX="367.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Armas creadas" visible="false">
+         <font>
+            <Font name="Harrington" size="30.0" />
+         </font>
+      </Text>
+      <Button blendMode="MULTIPLY" layoutX="669.0" layoutY="91.0" mnemonicParsing="false" onAction="#modificar" prefHeight="49.0" prefWidth="129.0" text="MODIFICAR">
+         <font>
+            <Font name="Bodoni MT Poster Compressed" size="26.0" />
+         </font></Button>
+      <ImageView fitHeight="49.0" fitWidth="64.0" layoutX="867.0" layoutY="9.0" onMouseClicked="#salir" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Imagenes/salir.png" />
+         </image>
+      </ImageView>
+      <Text fx:id="creadosL" layoutX="336.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Personajes creados">
+         <font>
+            <Font name="Harrington" size="30.0" />
+         </font>
+      </Text>
+      <ComboBox fx:id="nombresPersonajes" blendMode="MULTIPLY" layoutX="252.0" layoutY="96.0" prefHeight="40.0" prefWidth="230.0" />
+      <Text layoutX="177.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre">
+         <font>
+            <Font name="Gabriola" size="26.0" />
+         </font></Text>
+      <Button blendMode="MULTIPLY" layoutX="523.0" layoutY="91.0" mnemonicParsing="false" onAction="#verDetalles" text="VER DETALLES">
+         <font>
+            <Font name="Bodoni MT Poster Compressed" size="26.0" />
+         </font></Button>
+      <Line endX="300.0" layoutX="367.0" layoutY="159.0" startX="-100.0" stroke="#3187b2" strokeWidth="3.0" />
+      <Pane fx:id="detalles" layoutY="172.0" prefHeight="356.0" prefWidth="933.0">
+         <children>
+            <Text fx:id="imganesPersonaje" layoutX="583.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Imágenes nivel 1">
+               <font>
+                  <Font name="Gabriola" size="25.0" />
+               </font>
+            </Text>
+            <Text layoutX="486.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Personaje" textAlignment="CENTER">
+               <font>
+                  <Font name="Gabriola" size="21.0" />
+               </font></Text>
+            <Text layoutX="771.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Arma" textAlignment="CENTER">
+               <font>
+                  <Font name="Gabriola" size="21.0" />
+               </font></Text>
+            <ImageView fx:id="imagenPersonaje" fitHeight="200.0" fitWidth="253.0" layoutX="392.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="imagenArma" fitHeight="200.0" fitWidth="253.0" layoutX="662.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true" />
+            <Button blendMode="MULTIPLY" layoutX="509.0" layoutY="293.0" mnemonicParsing="false" onAction="#siguiente" text="Siguiente nivel">
+               <font>
+                  <Font name="Bodoni MT Poster Compressed" size="26.0" />
+               </font></Button>
+            <TextArea fx:id="clones" blendMode="MULTIPLY" editable="false" layoutX="14.0" layoutY="13.0" prefHeight="280.0" prefWidth="350.0">
+               <font>
+                  <Font name="Gabriola" size="20.0" />
+               </font></TextArea>
+            <TextField fx:id="cantClonesTF" alignment="TOP_CENTER" blendMode="MULTIPLY" layoutX="86.0" layoutY="303.0" onKeyPressed="#cargarClones" promptText="cantidad clones">
+               <font>
+                  <Font name="Gabriola" size="21.0" />
+               </font></TextField>
+            <Button blendMode="MULTIPLY" layoutX="677.0" layoutY="293.0" mnemonicParsing="false" onAction="#siguienteArma" text="Siguiente arma">
+               <font>
+                  <Font name="Bodoni MT Poster Compressed" size="26.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane fx:id="wait" layoutY="176.0" prefHeight="349.0" prefWidth="933.0" visible="false">
+         <children>
+            <ImageView fitHeight="303.0" fitWidth="695.0" layoutX="140.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Imagenes/verdetalles.gif" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane fx:id="armas" layoutY="170.0" prefHeight="356.0" prefWidth="933.0" visible="false">
+         <children>
+            <Text fx:id="nivelLabel" layoutX="594.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Imágenes nivel x" textAlignment="CENTER">
+               <font>
+                  <Font name="Gabriola" size="28.0" />
+               </font>
+            </Text>
+            <ImageView fx:id="imagenArma2" fitHeight="222.0" fitWidth="313.0" layoutX="509.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true" />
+            <Button fx:id="sigPersonaje" blendMode="MULTIPLY" layoutX="622.0" layoutY="287.0" mnemonicParsing="false" onAction="#siguienteArmas" text="Siguiente">
+               <font>
+                  <Font name="Bodoni MT Poster Compressed" size="25.0" />
+               </font></Button>
+            <TextArea fx:id="datosArmas" blendMode="MULTIPLY" editable="false" layoutX="27.0" layoutY="26.0" prefHeight="259.0" prefWidth="393.0">
+               <font>
+                  <Font name="Gabriola" size="20.0" />
+               </font>
+            </TextArea>
+            <TextField fx:id="cantidadClonesATF" alignment="CENTER" layoutX="117.0" layoutY="299.0" onKeyPressed="#cargarClones" promptText="cantidad de clones">
+               <font>
+                  <Font name="Gabriola" size="22.0" />
+               </font>
+            </TextField>
+         </children></Pane>
+   </children>
+</Pane>

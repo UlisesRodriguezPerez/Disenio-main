@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="arma" prefHeight="424.0" prefWidth="542.0" style="-fx-background-color: AZURE;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Vista.Controladores.CrearArma">
+   <children>
+      <ImageView fitHeight="430.0" fitWidth="544.0" opacity="0.63" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Imagenes/fondo4.jpg" />
+         </image>
+         <effect>
+            <GaussianBlur radius="7.7">
+               <input>
+                  <Lighting diffuseConstant="2.0" specularConstant="1.35">
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </input>
+            </GaussianBlur>
+         </effect>
+      </ImageView>
+      <Text fx:id="crearL" layoutX="198.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Crear arma">
+         <font>
+            <Font name="Harrington" size="30.0" />
+         </font>
+      </Text>
+      <Text layoutX="81.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre">
+         <font>
+            <Font name="Gabriola" size="22.0" />
+         </font></Text>
+      <Text layoutX="81.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Alcance">
+         <font>
+            <Font name="Gabriola" size="22.0" />
+         </font></Text>
+      <Text layoutX="81.0" layoutY="216.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Daño">
+         <font>
+            <Font name="Gabriola" size="22.0" />
+         </font></Text>
+      <Text layoutX="81.0" layoutY="266.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rango de explosión">
+         <font>
+            <Font name="Gabriola" size="22.0" />
+         </font></Text>
+      <TextField fx:id="nombreArma" blendMode="MULTIPLY" layoutX="231.0" layoutY="95.0">
+         <font>
+            <Font name="Gabriola" size="22.0" />
+         </font></TextField>
+      <TextField fx:id="alcanceArma" blendMode="MULTIPLY" layoutX="230.0" layoutY="144.0">
+         <font>
+            <Font name="Gabriola" size="22.0" />
+         </font></TextField>
+      <TextField fx:id="dannoArma" blendMode="MULTIPLY" layoutX="231.0" layoutY="195.0">
+         <font>
+            <Font name="Gabriola" size="22.0" />
+         </font></TextField>
+      <TextField fx:id="rangoExplosionArma" blendMode="MULTIPLY" layoutX="231.0" layoutY="245.0">
+         <font>
+            <Font name="Gabriola" size="22.0" />
+         </font></TextField>
+      <Button blendMode="MULTIPLY" layoutX="79.0" layoutY="297.0" mnemonicParsing="false" onAction="#niveles" text="Agregar imagen">
+         <font>
+            <Font name="Bodoni MT Poster Compressed" size="26.0" />
+         </font></Button>
+      <Button fx:id="agregarB" blendMode="MULTIPLY" layoutX="218.0" layoutY="363.0" mnemonicParsing="false" onAction="#crearArma" text="Agregar nueva arma">
+         <font>
+            <Font name="Bodoni MT Poster Compressed" size="26.0" />
+         </font></Button>
+      <ImageView fx:id="cerrar" fitHeight="40.0" fitWidth="51.0" layoutX="493.0" layoutY="14.0" onMouseClicked="#salir" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Imagenes/salir.png" />
+         </image></ImageView>
+      <ImageView fx:id="cerrar2" fitHeight="40.0" fitWidth="51.0" layoutX="493.0" layoutY="14.0" onMouseClicked="#salir2" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../Imagenes/salir.png" />
+         </image>
+      </ImageView>
+      <Text fx:id="modificarL" layoutX="173.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Modificar arma" visible="false">
+         <font>
+            <Font name="Harrington" size="30.0" />
+         </font>
+      </Text>
+      <Button fx:id="modificarB" blendMode="MULTIPLY" layoutX="237.0" layoutY="363.0" mnemonicParsing="false" onAction="#modificar" text="Modificar arma" visible="false">
+         <font>
+            <Font name="Bodoni MT Poster Compressed" size="25.0" />
+         </font>
+      </Button>
+      <TextField fx:id="nivelArmaTF" blendMode="MULTIPLY" layoutX="231.0" layoutY="297.0">
+         <font>
+            <Font name="Gabriola" size="22.0" />
+         </font>
+      </TextField>
+   </children>
+</AnchorPane>

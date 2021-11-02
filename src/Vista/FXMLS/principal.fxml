@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane fx:id="principal" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="358.0" prefWidth="692.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Vista.Controladores.ControllerPrincipal">
+   <children>
+      <ImageView fitHeight="369.0" fitWidth="705.0" layoutX="-6.0" layoutY="-3.0" opacity="0.62" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Imagenes/fondo1.jpg" />
+         </image>
+         <effect>
+            <GaussianBlur radius="8.46">
+               <input>
+                  <Lighting specularExponent="8.78" surfaceScale="2.35">
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </input>
+            </GaussianBlur>
+         </effect>
+      </ImageView>
+      <Text layoutX="154.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Creador de personajes y armas">
+         <font>
+            <Font name="Felix Titling" size="22.0" />
+         </font>
+      </Text>
+      <RadioButton fx:id="personajeRB" blendMode="MULTIPLY" layoutX="31.0" layoutY="105.0" mnemonicParsing="false" onAction="#personajeSelected" text="Personaje">
+         <font>
+            <Font name="Gabriola" size="22.0" />
+         </font></RadioButton>
+      <RadioButton fx:id="armaRB" blendMode="MULTIPLY" layoutX="227.0" layoutY="105.0" mnemonicParsing="false" onAction="#armaSelected" text="Arma">
+         <font>
+            <Font name="Gabriola" size="22.0" />
+         </font></RadioButton>
+      <Button fx:id="crearB" blendMode="MULTIPLY" layoutX="15.0" layoutY="143.0" mnemonicParsing="false" onAction="#crear" prefHeight="49.0" prefWidth="137.0" text="CREAR">
+         <font>
+            <Font name="Bodoni MT Poster Compressed" size="26.0" />
+         </font></Button>
+      <ImageView fx:id="salir" fitHeight="46.0" fitWidth="45.0" layoutX="633.0" layoutY="10.0" onMouseClicked="#cerrar" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Imagenes/salir.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="144.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Crear">
+         <font>
+            <Font name="Gabriola" size="30.0" />
+         </font>
+      </Text>
+      <Button fx:id="crearB1" blendMode="MULTIPLY" layoutX="360.0" layoutY="143.0" mnemonicParsing="false" onAction="#verPersonajes" prefHeight="49.0" prefWidth="153.0" text="VER PERSONAJES ">
+         <font>
+            <Font name="Bodoni MT Poster Compressed" size="26.0" />
+         </font></Button>
+      <Button fx:id="crearB11" blendMode="MULTIPLY" layoutX="525.0" layoutY="143.0" mnemonicParsing="false" onAction="#verArmas" prefHeight="49.0" prefWidth="153.0" text="VER ARMAS ">
+         <font>
+            <Font name="Bodoni MT Poster Compressed" size="26.0" />
+         </font></Button>
+      <Text layoutX="459.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ver detalles">
+         <font>
+            <Font name="Gabriola" size="30.0" />
+         </font>
+      </Text>
+      <Line endX="50.0" layoutX="369.0" layoutY="128.0" rotate="90.0" startX="-100.0" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeWidth="3.0" />
+      <TextField fx:id="rutaDirectorio" alignment="TOP_LEFT" blendMode="MULTIPLY" layoutX="83.0" layoutY="283.0" prefHeight="40.0" prefWidth="303.0" promptText="guardar en...">
+         <font>
+            <Font name="Gabriola" size="20.0" />
+         </font></TextField>
+      <Button fx:id="crearB111" blendMode="MULTIPLY" layoutX="429.0" layoutY="279.0" mnemonicParsing="false" onAction="#cargarRuta" prefHeight="49.0" prefWidth="153.0" text="CARGAR ARCHIVO">
+         <font>
+            <Font name="Bodoni MT Poster Compressed" size="26.0" />
+         </font>
+      </Button>
+      <Button fx:id="crearB2" blendMode="MULTIPLY" layoutX="192.0" layoutY="143.0" mnemonicParsing="false" onAction="#guardarPersonajes" prefHeight="49.0" prefWidth="137.0" text="GUARDAR ">
+         <font>
+            <Font name="Bodoni MT Poster Compressed" size="26.0" />
+         </font>
+      </Button>
+      <Line endX="400.0" layoutX="194.0" layoutY="215.0" startX="-100.0" strokeWidth="3.0" />
+      <Text layoutX="262.0" layoutY="252.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Manejo de archivos">
+         <font>
+            <Font name="Gabriola" size="30.0" />
+         </font>
+      </Text>
+   </children>
+</Pane>

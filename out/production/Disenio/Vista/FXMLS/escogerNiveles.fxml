@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane fx:id="niveles" prefHeight="401.0" prefWidth="611.0" style="-fx-background-color: BEIGE;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Vista.Controladores.ControllerNiveles">
+   <children>
+      <ImageView fitHeight="401.0" fitWidth="627.0" layoutX="1.0" layoutY="-2.0" opacity="0.44" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Imagenes/fondo3.jpg" />
+         </image>
+         <effect>
+            <GaussianBlur radius="9.23" />
+         </effect>
+      </ImageView>
+      <Text fx:id="nivelNumero" layoutX="282.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nivel">
+         <font>
+            <Font name="Harrington" size="29.0" />
+         </font>
+      </Text>
+      <Text layoutX="14.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Acción">
+         <font>
+            <Font name="Gabriola" size="25.0" />
+         </font></Text>
+      <ComboBox fx:id="accionesCB" blendMode="MULTIPLY" layoutX="119.0" layoutY="84.0" prefHeight="40.0" prefWidth="195.0" />
+      <Text layoutX="14.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nueva acción">
+         <font>
+            <Font name="Gabriola" size="25.0" />
+         </font></Text>
+      <TextField fx:id="accionesTF" blendMode="MULTIPLY" layoutX="119.0" layoutY="140.0">
+         <font>
+            <Font name="Gabriola" size="20.0" />
+         </font></TextField>
+      <Button blendMode="MULTIPLY" layoutX="119.0" layoutY="201.0" mnemonicParsing="false" onAction="#seleccionarImagen" text="ESCOGER IMAGEN">
+         <font>
+            <Font name="Bodoni MT Poster Compressed" size="25.0" />
+         </font></Button>
+      <ImageView fx:id="foto" fitHeight="177.0" fitWidth="246.0" layoutX="344.0" layoutY="79.0" pickOnBounds="true" preserveRatio="true" />
+      <Button blendMode="MULTIPLY" layoutX="241.0" layoutY="338.0" mnemonicParsing="false" onAction="#agregarImagenesNivel" text="AGREGAR NIVEL">
+         <font>
+            <Font name="Bodoni MT Poster Compressed" size="25.0" />
+         </font></Button>
+      <Button blendMode="MULTIPLY" layoutX="397.0" layoutY="278.0" mnemonicParsing="false" onAction="#agregarImagen" text="AGREGAR IMAGEN">
+         <font>
+            <Font name="Bodoni MT Poster Compressed" size="25.0" />
+         </font></Button>
+      <ImageView fitHeight="46.0" fitWidth="44.0" layoutX="553.0" layoutY="14.0" onMouseClicked="#cerrar" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Imagenes/salir.png" />
+         </image>
+      </ImageView>
+   </children>
+</Pane>

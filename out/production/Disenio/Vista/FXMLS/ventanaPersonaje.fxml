@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane fx:id="contenedor" prefHeight="584.0" prefWidth="553.0" style="-fx-background-color: AZURE;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Vista.Controladores.ControllerPersonaje">
+   <children>
+      <ImageView fitHeight="540.0" fitWidth="454.0" layoutX="57.0" layoutY="22.0" opacity="0.53" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Imagenes/fondo2.jpg" />
+         </image>
+         <effect>
+            <GaussianBlur radius="5.39">
+               <input>
+                  <Lighting diffuseConstant="2.0" specularConstant="1.44" specularExponent="17.07" surfaceScale="0.0">
+                     <bumpInput>
+                        <Shadow radius="4.75" width="0.0" />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </input>
+            </GaussianBlur>
+         </effect>
+      </ImageView>
+      <Text fx:id="crearLabel" layoutX="133.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Crear nuevo personaje">
+         <font>
+            <Font name="Harrington" size="29.0" />
+         </font>
+      </Text>
+      <Text layoutX="21.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre">
+         <font>
+            <Font name="Gabriola" size="22.0" />
+         </font>
+      </Text>
+      <Text layoutX="21.0" layoutY="207.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vida">
+         <font>
+            <Font name="Gabriola" size="22.0" />
+         </font>
+      </Text>
+      <Text layoutX="21.0" layoutY="257.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Campos (espacio requerido)">
+         <font>
+            <Font name="Gabriola" size="22.0" />
+         </font>
+      </Text>
+      <Text layoutX="21.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ataque">
+         <font>
+            <Font name="Gabriola" size="22.0" />
+         </font>
+      </Text>
+      <Text layoutX="21.0" layoutY="307.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nivel de aparición">
+         <font>
+            <Font name="Gabriola" size="22.0" />
+         </font>
+      </Text>
+      <Text layoutX="21.0" layoutY="357.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Costo">
+         <font>
+            <Font name="Gabriola" size="22.0" />
+         </font>
+      </Text>
+      <TextField fx:id="nombreTF" blendMode="MULTIPLY" layoutX="270.0" layoutY="85.0">
+         <font>
+            <Font name="Gabriola" size="22.0" />
+         </font></TextField>
+      <TextField fx:id="ataqueTF" blendMode="MULTIPLY" layoutX="270.0" layoutY="135.0">
+         <font>
+            <Font name="Gabriola" size="22.0" />
+         </font></TextField>
+      <TextField fx:id="vidaTF" blendMode="MULTIPLY" layoutX="270.0" layoutY="185.0">
+         <font>
+            <Font name="Gabriola" size="22.0" />
+         </font></TextField>
+      <TextField fx:id="camposTF" blendMode="MULTIPLY" layoutX="270.0" layoutY="235.0">
+         <font>
+            <Font name="Gabriola" size="22.0" />
+         </font></TextField>
+      <TextField fx:id="nivelAparTF" blendMode="MULTIPLY" layoutX="270.0" layoutY="285.0">
+         <font>
+            <Font name="Gabriola" size="22.0" />
+         </font></TextField>
+      <TextField fx:id="costoTF" blendMode="MULTIPLY" layoutX="270.0" layoutY="335.0">
+         <font>
+            <Font name="Gabriola" size="22.0" />
+         </font></TextField>
+      <Button blendMode="MULTIPLY" layoutX="21.0" layoutY="447.0" mnemonicParsing="false" onAction="#agregarNiveles" text="AGREGAR NIVELES">
+         <font>
+            <Font name="Bodoni MT Poster Compressed" size="26.0" />
+         </font></Button>
+      <ImageView fx:id="salir" fitHeight="46.0" fitWidth="45.0" layoutX="488.0" layoutY="15.0" onMouseClicked="#cerrar" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Imagenes/salir.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="agregarBut" blendMode="MULTIPLY" layoutX="168.0" layoutY="503.0" mnemonicParsing="false" onAction="#agregarNuevo" text="AGREGAR PERSONAJE NUEVO">
+         <font>
+            <Font name="Bodoni MT Poster Compressed" size="26.0" />
+         </font></Button>
+      <Text layoutX="21.0" layoutY="407.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Armas">
+         <font>
+            <Font name="Gabriola" size="22.0" />
+         </font>
+      </Text>
+      <ComboBox fx:id="armasPersonaje" blendMode="MULTIPLY" layoutX="268.0" layoutY="385.0" prefHeight="43.0" prefWidth="214.0" />
+      <ImageView fitHeight="43.0" fitWidth="27.0" layoutX="501.0" layoutY="395.0" onMouseClicked="#agregarArma" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Imagenes/mas.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="498.0" layoutY="444.0" strokeType="OUTSIDE" strokeWidth="0.0" text="otra">
+         <font>
+            <Font name="Consolas" size="15.0" />
+         </font></Text>
+      <Text fx:id="modificarLabel" layoutX="154.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Modificar personaje" visible="false">
+         <font>
+            <Font name="Harrington" size="26.0" />
+         </font>
+      </Text>
+      <Button fx:id="modificarButt" blendMode="MULTIPLY" layoutX="181.0" layoutY="503.0" mnemonicParsing="false" onAction="#modificar" text="MODIFICAR PERSONAJE" visible="false">
+         <font>
+            <Font name="Bodoni MT Poster Compressed" size="27.0" />
+         </font></Button>
+      <ImageView fx:id="salir2" fitHeight="46.0" fitWidth="45.0" layoutX="488.0" layoutY="15.0" onMouseClicked="#cerrar2" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../Imagenes/salir.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="nivelPersonajeTF" blendMode="MULTIPLY" layoutX="270.0" layoutY="440.0">
+         <font>
+            <Font name="Gabriola" size="22.0" />
+         </font>
+      </TextField>
+   </children>
+</Pane>
